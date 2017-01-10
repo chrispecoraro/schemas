@@ -15,7 +15,7 @@
         {
             "properties": {
                 "value": {
-                    "description": "A time of day value (hours and minutes).",
+                    "description": "A time of day value (hours and minutes) in 24 hours format.",
                     "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
                 }
             }

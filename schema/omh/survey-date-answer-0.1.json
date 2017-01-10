@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a time value answer to a survey question.",
+    "description": "This schema represents a (full or partial) date value answer to a survey question.",
 
     "type": "object",
     "definitions": {

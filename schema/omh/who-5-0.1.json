@@ -1,0 +1,203 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema models the WHO-Five Well-being Index (WHO-5).",
+    "type": "object",
+
+    "references": [
+        {
+            "description": "The LOINC code represents ???",
+            "url": "http://purl.bioontology.org/ontology/LNC/"
+        },
+        {
+            "description": "The WHO-Five Well-being Index (WHO-5)",
+            "url": "http://www.psy-world.com/who-5.htm"
+        }
+    ],
+
+    "definitions": {
+        "survey": {
+            "$ref": "survey-0.x.json"
+        },
+        "survey_item": {
+            "$ref": "survey-item-0.x.json"
+        },
+        "survey_categorical_answer": {
+            "$ref": "survey-categorical-answer-0.x.json"
+        },
+        "survey_categorical_answer_item": {
+            "description": "A survey item that has one categorical answer.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_categorical_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "frequency_scale_item": {
+            "description": "A categorical answer item where the answer is one of the four frequency categories from PHQ-9.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_categorical_answer_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "items": {
+                                "enum": [
+                                    {
+                                        "code": 0,
+                                        "value": "At no time"
+                                    },
+                                    {
+                                        "code": 1,
+                                        "value": "Some of the time"
+                                    },
+                                    {
+                                        "code": 2,
+                                        "value": "Less than half of the time"
+                                    },
+                                    {
+                                        "code": 3,
+                                        "value": "More than half of the time"
+                                    },
+                                    {
+                                        "code": 4,
+                                        "value": "Most of the time"
+                                    },
+                                    {
+                                        "code": 5,
+                                        "value": "All of the time"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/survey"
+        },
+        {
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "minItems": 10,
+                    "items": [
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "1",
+                                                    "text": "Over the last 2 weeks, I have felt cheerful and in good spirits"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "2",
+                                                    "text": "Over the last 2 weeks, I have felt calm and relaxed"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "3",
+                                                    "text": "Over the last 2 weeks, I have felt active and vigorous"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "4",
+                                                    "text": "Over the last 2 weeks, I woke up feeling fresh and rested"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "5",
+                                                    "text": "Over the last 2 weeks, My daily life has been filled with things that interest me"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "additionalItems": false
+                }
+            }
+        }
+    ]
+}

@@ -97,7 +97,7 @@
             "properties": {
                 "items": {
                     "type": "array",
-                    "minItems": 10,
+                    "minItems": 5,
                     "items": [
                         {
                             "allOf": [

@@ -1,0 +1,256 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema models the Neuro-QoL Lower Extremity Function (Mobility) – Short Form.",
+    "type": "object",
+
+    "references": [
+        {
+            "description": "The LOINC code represents ???",
+            "url": "http://purl.bioontology.org/ontology/LNC/"
+        },
+        {
+            "description": "The the Neuro-QoL Lower Extremity Function (Mobility) – Short Form",
+            "url": "http://www.healthmeasures.net/administrator/components/com_instruments/uploads/15-09-01_01-58-12_Neuro-QOLv1.0-LowerExtremityFunction-MobilitySF_03-14-2014.pdf"
+        }
+    ],
+
+    "definitions": {
+        "survey": {
+            "$ref": "survey-0.x.json"
+        },
+        "survey_item": {
+            "$ref": "survey-item-0.x.json"
+        },
+        "survey_categorical_answer": {
+            "$ref": "survey-categorical-answer-0.x.json"
+        },
+        "survey_categorical_answer_item": {
+            "description": "A survey item that has one categorical answer.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_categorical_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "frequency_scale_item": {
+            "description": "A categorical answer item where the answer is one of the four frequency categories from PHQ-9.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_categorical_answer_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "items": {
+                                "enum": [
+                                    {
+                                        "code": 1,
+                                        "value": "Unable to do"
+                                    },
+                                    {
+                                        "code": 2,
+                                        "value": "With much difficulty"
+                                    },
+                                    {
+                                        "code": 3,
+                                        "value": "With some difficulty"
+                                    },
+                                    {
+                                        "code": 4,
+                                        "value": "With a little difficulty"
+                                    },
+                                    {
+                                        "code": 5,
+                                        "value": "Without any difficulty"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/survey"
+        },
+        {
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "minItems": 10,
+                    "items": [
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "NQMOB37",
+                                                    "text": "Are you able to get on and off the toilet?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "NQMOB30",
+                                                    "text": "Are you able to step up and down curbs?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "NQMOB26",
+                                                    "text": "Are you able to get in and out of a car?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "NQMOB32",
+                                                    "text": "Are you able to get out of bed into a chair?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "NQMOB25",
+                                                    "text": "Are you able to push open a heavy door?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "NQMOB33",
+                                                    "text": "Are you able to run errands and shop?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "NQMOB31",
+                                                    "text": "Are you able to get up off the floor from lying on your back without help?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "NQMOB28",
+                                                    "text": "Are you able to go for a walk of at least 15 minutes?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "additionalItems": false
+                }
+            }
+        }
+    ]
+}

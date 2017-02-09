@@ -6,10 +6,6 @@
 
     "references": [
         {
-            "description": "The LOINC code represents ???",
-            "url": "http://purl.bioontology.org/ontology/LNC/"
-        },
-        {
             "description": "The the Neuro-QoL Lower Extremity Function (Mobility) – Short Form",
             "url": "http://www.healthmeasures.net/administrator/components/com_instruments/uploads/15-09-01_01-58-12_Neuro-QOLv1.0-LowerExtremityFunction-MobilitySF_03-14-2014.pdf"
         }
@@ -93,7 +89,7 @@
             "properties": {
                 "items": {
                     "type": "array",
-                    "minItems": 10,
+                    "minItems": 8,
                     "items": [
                         {
                             "allOf": [

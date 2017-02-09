@@ -6,10 +6,6 @@
 
     "references": [
         {
-            "description": "The LOINC code represents ???",
-            "url": "http://purl.bioontology.org/ontology/LNC/"
-        },
-        {
             "description": "The WHO-Five Well-being Index (WHO-5)",
             "url": "http://www.psy-world.com/who-5.htm"
         }

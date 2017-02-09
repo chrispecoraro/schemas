@@ -1,0 +1,75 @@
+{
+    "items": [
+        {
+            "answers": [
+                {
+                    "code": 0,
+                    "value": "At no time"
+                }
+            ],
+            "asked_date_time": "2015-02-05T07:24:00Z",
+            "answered_date_time": "2015-02-05T07:24:05Z"
+        },
+        {
+            "question": {
+                "label": "2",
+                "text": "Over the last 2 weeks, I have felt calm and relaxed"
+            },
+            "answers": [
+                {
+                    "code": 0,
+                    "value": "At no time"
+                }
+            ],
+            "asked_date_time": "2015-02-05T07:24:10Z",
+            "answered_date_time": "2015-02-05T07:24:15Z"
+        },
+        {
+            "question": {
+                "label": "3",
+                "text": "Over the last 2 weeks, I have felt active and vigorous"
+            },
+            "answers": [
+                {
+                    "code": 0,
+                    "value": "At no time"
+                }
+            ],
+            "asked_date_time": "2015-02-05T07:24:20Z",
+            "answered_date_time": "2015-02-05T07:24:25Z"
+        },
+        {
+            "question": {
+                "label": "4",
+                "text": "Over the last 2 weeks, I woke up feeling fresh and rested"
+            },
+            "answers": [
+                {
+                    "code": 0,
+                    "value": "At no time"
+                }
+            ],
+            "asked_date_time": "2015-02-05T07:24:30Z",
+            "answered_date_time": "2015-02-05T07:24:35Z"
+        },
+        {
+            "question": {
+                "label": "5",
+                "text": "Over the last 2 weeks, my daily life has been filled with things that interest me"
+            },
+            "answers": [
+                {
+                    "code": 0,
+                    "value": "At no time"
+                }
+            ],
+            "asked_date_time": "2015-02-05T07:24:40Z",
+            "answered_date_time": "2015-02-05T07:24:45Z"
+        }
+    ],
+    "delivery_details": {
+        "start_date_time": "2015-02-05T07:24:00Z",
+        "end_date_time": "2015-02-05T07:26:00Z",
+        "end_status": "completed"
+    }
+}

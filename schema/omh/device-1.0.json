@@ -1,11 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents a device source of data.",
+    "description": "This schema represents a device (consumer- or research-grade) that records some data about the individual.",
     "type": "object",
-
-    "definitions": {
-    },
 
     "properties": {
         "name": {

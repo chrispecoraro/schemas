@@ -1,11 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents an application source of data.",
+    "description": "This schema represents an application that records some data about the individual.",
     "type": "object",
-
-    "definitions": {
-    },
 
     "properties": {
         "name": {
@@ -46,9 +43,6 @@
                     }
                 }
             ]
-        },
-        "position_in_lineage": {
-            "type": "string"
         }
     },
     "required": [

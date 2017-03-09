@@ -1,0 +1,16 @@
+{
+    "id": "291890420",
+    "provider": "UnderArmour",
+    "version": "17.2.2",
+    "url": "http://itunes.apple.com/us/app/imapmyrun/id291890420/?mt=8",
+    "platforms": [
+        {
+            "os": {
+                "type": "iOS"
+            },
+            "version": {
+                "type": "9.3.5"
+            }
+        }
+    ]
+}

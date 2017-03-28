@@ -1,0 +1,9 @@
+{
+    "name": "AutoSense",
+    "manufacturer": "EETech",
+    "model": "AutoSense_v3",
+    "firmware": "3.2.0",
+    "url": "http://web0.cs.memphis.edu/~santosh/Papers/AutoSense.pdf",
+    "hardware_address": "2456",
+    "id": "XX0019"
+}

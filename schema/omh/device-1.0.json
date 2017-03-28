@@ -9,6 +9,26 @@
             "type": "string",
             "description": "The name of the device."
         },
+        "manufacturer": {
+            "type": "string",
+            "description": "The manufacturer of the device."
+        },
+        "model": {
+            "type": "string",
+            "description": "The model of the device."
+        },
+        "firmware": {
+            "type": "string",
+            "description": "The firmware of the device."
+        },
+        "url": {
+            "type": "string",
+            "description": "Pointer to relevant documentation on the device, particularly in the case of prototypes / research-grade sensors."
+        },
+        "hardware_address": {
+            "type": "string",
+            "description": "The hardware address of the device."
+        },
         "id": {
             "type": "string",
             "description": "The UDI or UPC/serial number or any other unique identification of the source device."

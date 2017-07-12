@@ -1,0 +1,33 @@
+{
+    "id": "123e4567-e89b-12d3-a456-426655440000",
+    "creation_date_time": "2013-02-05T07:25:00Z",
+    "schema_id": {
+        "namespace": "omh",
+        "name": "physical-activity",
+        "version": "1.1"
+    },
+    "acquisition_provenance": {
+        "source": {
+            "application": {
+                "name": "MapMyRun",
+                "id": "291890420",
+                "provider": "UnderArmour",
+                "version": "17.2.2",
+                "url": "http://itunes.apple.com/us/app/imapmyrun/id291890420/?mt=8",
+                "platforms": [
+                    {
+                        "os": {
+                            "type": "iOS"
+                        },
+                        "version": {
+                            "type": "9.3.5"
+                        }
+                    }
+                ]
+            }
+        },
+        "source_creation_date_time": "2013-02-05T07:25:00Z",
+        "modality": "sensed"
+    },
+    "user_id": "user1432"
+}

@@ -7,24 +7,24 @@
     "properties": {
         "name": {
             "type": "string",
-            "description": "The name of the source application."
+            "description": "The name of the application."
         },
         "id": {
             "type": "string",
-            "description": "The id of the source application."
+            "description": "The id of the application."
         },
         "provider": {
             "type": "string",
-            "description": "The provider of the source application."
+            "description": "The provider of the application."
         },
         "url": {
             "type": "string",
-            "description": "The URL of the source application.",
+            "description": "The URL of the application.",
             "format": "uri"
         },
         "version": {
             "type": "string",
-            "description": "The version of the source application."
+            "description": "The version of the application."
         },
         "platforms": {
             "type": "array",
@@ -38,11 +38,15 @@
                     },
                     "url": {
                         "type": "string",
-                        "description": "The URL of the source application.",
+                        "description": "The URL of the application.",
                         "format": "uri"
                     }
                 }
             ]
+        },
+        "accuracy": {
+            "type": "string",
+            "description": "A measure of the accuracy of the application, according to its specifications."
         }
     },
     "required": [

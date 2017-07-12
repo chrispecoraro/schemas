@@ -31,7 +31,7 @@
         },
         "id": {
             "type": "string",
-            "description": "The UDI or UPC/serial number or any other unique identification of the source device."
+            "description": "The UDI or UPC/serial number or any other unique identification of the device."
         },
         "id_type": {
             "type": "string",
@@ -43,6 +43,10 @@
                     "enum": ["FDA","UPC"]
                 }
             ]
+        },
+        "accuracy": {
+            "type": "string",
+            "description": "A measure of the accuracy of the device, according to its specifications."
         }
     },
 

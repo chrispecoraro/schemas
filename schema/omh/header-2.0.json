@@ -57,7 +57,37 @@
                 "modality": {
                     "description": "The modality whereby the measure is obtained.",
                     "type": "string",
-                    "enum": ["sensed","self-reported"]
+                    "enum": [
+                        "sensed",
+                        "self-reported"
+                    ]
+                },
+                "handedness": {
+                    "type": "string",
+                    "enum": [
+                        "ambidextrous",
+                        "left handed",
+                        "right handed",
+                        "unknown handedness"
+                    ]
+                },
+                "placement": {
+                    "description": "Placement of the device or measuring application.",
+                    "type": "string",
+                    "enum": [
+                        "left ankle",
+                        "right ankle",
+                        "left hip",
+                        "right hip",
+                        "left thigh",
+                        "right thigh",
+                        "left thorax",
+                        "middle left thorax",
+                        "left upper arm",
+                        "right upper arm",
+                        "left wrist",
+                        "right wrist"
+                    ]
                 }
             },
             "required": [

@@ -36,19 +36,21 @@
             "type": "object",
             "properties": {
                 "source": {
-                    "type": "object",
-                    "oneOf": [
-                        {
-                            "device": {
-                                "description": "The device source of the data.",
-                                "$ref": "#/definitions/device"
-                            },
-                            "application": {
-                                "description": "The application source of the data.",
-                                "$ref": "#/definitions/application"
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "device": {
+                                    "description": "The device source of the data.",
+                                    "$ref": "#/definitions/device"
+                                },
+                                "application": {
+                                    "description": "The application source of the data.",
+                                    "$ref": "#/definitions/application"
+                                }
                             }
-                        }
-                    ]
+                        ]
+                    }
                 },
                 "source_creation_date_time": {
                     "description": "The date time (timestamp) of data creation at the source.",

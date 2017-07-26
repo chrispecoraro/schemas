@@ -9,6 +9,14 @@
     "acquisition_provenance": {
         "source": [
             {
+                "device": {
+                    "name": "Charge HR",
+                    "manufacturer": "Fitbit",
+                    "model": "Charge HR",
+                    "id": "27072629"
+                }
+            },
+            {
                 "application": {
                     "name": "Map My Run",
                     "id": "291890420",
@@ -26,10 +34,29 @@
                         }
                     ]
                 }
+            },
+            {
+                "application": {
+                    "name": "Map My Fitness",
+                    "id": "291890420",
+                    "provider": "UnderArmour",
+                    "version": "17.7.1",
+                    "url": "https://itunes.apple.com/us/app/map-my-fitness-gps-workout-trainer-tracker/id298903147?mt=8",
+                    "platforms": [
+                        {
+                            "os": {
+                                "type": "iOS"
+                            },
+                            "version": {
+                                "type": "9.3.5"
+                            }
+                        }
+                    ]
+                }
             }
         ],
-        "handedness": "right handed",
-        "placement": "left upper arm",
+        "handedness": "left handed",
+        "placement": "left wrist",
         "source_creation_date_time": "2013-02-05T07:25:00Z",
         "modality": "sensed"
     },

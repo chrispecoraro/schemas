@@ -12,10 +12,10 @@
             "$ref": "schema-id-1.x.json"
         },
         "device": {
-            "$ref": "device-1.x.json"
+            "$ref": "device-0.x.json"
         },
         "application":{
-            "$ref": "application-1.x.json"
+            "$ref": "application-0.x.json"
         }
     },
 

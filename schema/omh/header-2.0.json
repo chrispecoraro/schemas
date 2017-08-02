@@ -33,67 +33,69 @@
             "$ref": "#/definitions/schema_id"
         },
         "acquisition_provenance": {
-            "type": "object",
-            "properties": {
-                "source": {
-                    "type": "array",
-                    "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "source": {
                         "oneOf": [
                             {
                                 "device": {
-                                    "description": "The device source of the data.",
+                                    "description": "Device source of the data.",
                                     "$ref": "#/definitions/device"
                                 },
                                 "application": {
-                                    "description": "The application source of the data.",
+                                    "description": "Application source of the data.",
                                     "$ref": "#/definitions/application"
                                 }
                             }
                         ]
+                    },
+                    "source_creation_date_time": {
+                        "description": "The date time (timestamp) of data creation at the source.",
+                        "$ref": "#/definitions/date_time"
+                    },
+                    "modality": {
+                        "description": "The modality whereby the measure is obtained.",
+                        "type": "string",
+                        "enum": [
+                            "sensed",
+                            "self-reported"
+                        ]
+                    },
+                    "placement": {
+                        "description": "Placement of the device or measuring application.",
+                        "type": "string",
+                        "enum": [
+                            "left ankle",
+                            "right ankle",
+                            "left hip",
+                            "right hip",
+                            "left thigh",
+                            "right thigh",
+                            "left thorax",
+                            "middle left thorax",
+                            "left upper arm",
+                            "right upper arm",
+                            "left wrist",
+                            "right wrist"
+                        ]
                     }
                 },
-                "source_creation_date_time": {
-                    "description": "The date time (timestamp) of data creation at the source.",
-                    "$ref": "#/definitions/date_time"
-                },
-                "modality": {
-                    "description": "The modality whereby the measure is obtained.",
-                    "type": "string",
-                    "enum": [
-                        "sensed",
-                        "self-reported"
-                    ]
-                },
-                "handedness": {
-                    "type": "string",
-                    "enum": [
-                        "ambidextrous",
-                        "left handed",
-                        "right handed",
-                        "unknown handedness"
-                    ]
-                },
-                "placement": {
-                    "description": "Placement of the device or measuring application.",
-                    "type": "string",
-                    "enum": [
-                        "left ankle",
-                        "right ankle",
-                        "left hip",
-                        "right hip",
-                        "left thigh",
-                        "right thigh",
-                        "left thorax",
-                        "middle left thorax",
-                        "left upper arm",
-                        "right upper arm",
-                        "left wrist",
-                        "right wrist"
-                    ]
-                }
-            },
-            "required": [
-                "source"
+                "required": [
+                    "source",
+                    "source_creation_date_time"
+                ]
+            }
+        },
+        "handedness": {
+            "description": "The person's handedness, which indicates the dominant side.",
+            "type": "string",
+            "enum": [
+                "ambidextrous",
+                "left handed",
+                "right handed",
+                "unknown handedness"
             ]
         },
         "user_id": {
@@ -103,7 +105,7 @@
     },
     "required": [
         "id",
-        "creation_date_time",
-        "schema_id"
+        "schema_id",
+        "user_id"
     ]
 }

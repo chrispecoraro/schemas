@@ -6,9 +6,9 @@
         "name": "physical-activity",
         "version": "1.1"
     },
-    "acquisition_provenance": {
-        "source": [
-            {
+    "acquisition_provenance":  [
+        {
+            "source": {
                 "application": {
                     "name": "Map My Run",
                     "id": "291890420",
@@ -26,12 +26,12 @@
                         }
                     ]
                 }
-            }
-        ],
-        "handedness": "right handed",
-        "placement": "left upper arm",
-        "source_creation_date_time": "2013-02-05T07:25:00Z",
-        "modality": "sensed"
-    },
+            },
+
+            "source_creation_date_time": "2013-02-05T07:25:00Z",
+            "modality": "sensed"
+        }
+    ],
+    "handedness": "right handed",
     "user_id": "user1432"
 }

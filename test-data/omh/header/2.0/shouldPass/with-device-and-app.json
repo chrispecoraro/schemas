@@ -6,9 +6,9 @@
         "name": "physical-activity",
         "version": "1.1"
     },
-    "acquisition_provenance": {
-        "source": [
-            {
+    "acquisition_provenance": [
+        {
+            "source": {
                 "device": {
                     "name": "Charge HR",
                     "manufacturer": "Fitbit",
@@ -16,7 +16,12 @@
                     "id": "27072629"
                 }
             },
-            {
+            "placement": "left wrist",
+            "source_creation_date_time": "2013-02-05T07:25:00Z",
+            "modality": "sensed"
+        },
+        {
+            "source": {
                 "application": {
                     "name": "Map My Run",
                     "id": "291890420",
@@ -35,7 +40,11 @@
                     ]
                 }
             },
-            {
+            "source_creation_date_time": "2013-02-05T07:25:00Z",
+            "modality": "sensed"
+        },
+        {
+            "source": {
                 "application": {
                     "name": "Map My Fitness",
                     "id": "291890420",
@@ -53,12 +62,11 @@
                         }
                     ]
                 }
-            }
-        ],
-        "handedness": "left handed",
-        "placement": "left wrist",
-        "source_creation_date_time": "2013-02-05T07:25:00Z",
-        "modality": "sensed"
-    },
+            },
+            "source_creation_date_time": "2013-02-05T07:25:00Z",
+            "modality": "sensed"
+        }
+    ],
+    "handedness": "left handed",
     "user_id": "user1432"
 }

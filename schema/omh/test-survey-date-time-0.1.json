@@ -4,10 +4,6 @@
     "description": "This schema models a test survey with questions that require date or time answers.",
     "type": "object",
 
-    "references": [
-
-    ],
-
     "definitions": {
         "survey": {
             "$ref": "survey-0.x.json"

@@ -25,12 +25,12 @@
     "anyOf": [
         {
             "properties": {
-                "date_of_birth": {
+                "birth_date": {
                     "description": "The person's date of birth.",
                     "$ref": "#/definitions/full_date"
                 }
             },
-            "required": [ "date_of_birth"]
+            "required": [ "birth_date"]
         },
         {
             "properties": {

@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents a person and models properties that are basically invariant, like handedness and date of birth.",
+    "description": "This schema represents a person and models properties like handedness and date of birth.",
     "type": "object",
 
     "references": [
@@ -23,7 +23,6 @@
         }
 
     },
-
     "properties": {
         "date_of_birth": {
             "description": "The person's date of birth.",
@@ -39,6 +38,5 @@
                 "unknown handedness"
             ]
         }
-
     }
 }

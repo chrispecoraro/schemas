@@ -21,22 +21,31 @@
             ],
             "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
         }
-
     },
-    "properties": {
-        "date_of_birth": {
-            "description": "The person's date of birth.",
-            "$ref": "#/definitions/full_date"
+    "anyOf": [
+        {
+            "properties": {
+                "date_of_birth": {
+                    "description": "The person's date of birth.",
+                    "$ref": "#/definitions/full_date"
+                }
+            },
+            "required": [ "date_of_birth"]
         },
-        "handedness": {
-            "description": "The person's handedness, which indicates the dominant side.",
-            "type": "string",
-            "enum": [
-                "ambidextrous",
-                "left handed",
-                "right handed",
-                "unknown handedness"
-            ]
+        {
+            "properties": {
+                "handedness": {
+                    "description": "The person's handedness, which indicates the dominant side.",
+                    "type": "string",
+                    "enum": [
+                        "ambidextrous",
+                        "left handed",
+                        "right handed",
+                        "unknown handedness"
+                    ]
+                }
+            },
+            "required": [ "handedness"]
         }
-    }
+    ]
 }

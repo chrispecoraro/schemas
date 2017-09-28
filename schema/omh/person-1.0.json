@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a person and models properties that are basically invariant, like handedness and date of birth.",
+    "type": "object",
+
+    "references": [
+        {
+            "description": "The SNOMED code represents Person (person).",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/125676002"
+        }
+    ],
+    "definitions": {
+        "full_date": {
+            "type": "string",
+            "references": [
+                {
+                    "description": "This schema represents a date. See RFC 3339 5.6 for details.",
+                    "url": "http://tools.ietf.org/html/rfc3339"
+                }
+            ],
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        }
+
+    },
+
+    "properties": {
+        "date_of_birth": {
+            "description": "The person's date of birth.",
+            "$ref": "#/definitions/full_date"
+        },
+        "handedness": {
+            "description": "The person's handedness, which indicates the dominant side.",
+            "type": "string",
+            "enum": [
+                "ambidextrous",
+                "left handed",
+                "right handed",
+                "unknown handedness"
+            ]
+        }
+
+    }
+}

@@ -40,7 +40,9 @@
                     "$ref": "#/definitions/date"
                 }
             },
-            "required": [ "birth_date"]
+            "required": [
+                "birth_date"
+            ]
         },
         {
             "properties": {
@@ -55,7 +57,9 @@
                     ]
                 }
             },
-            "required": [ "handedness"]
+            "required": [
+                "handedness"
+            ]
         }
     ]
 }

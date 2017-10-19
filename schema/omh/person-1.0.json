@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents a person and models properties like handedness and date of birth.",
+    "description": "This schema represents a person and models properties like handedness and birth date.",
     "type": "object",
 
     "references": [
@@ -11,7 +11,7 @@
         }
     ],
     "definitions": {
-        "full_date": {
+        "date": {
             "type": "string",
             "references": [
                 {
@@ -19,15 +19,25 @@
                     "url": "http://tools.ietf.org/html/rfc3339"
                 }
             ],
-            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            "oneOf": [
+                {
+                    "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+                },
+                {
+                    "pattern": "^[0-9]{4}-[0-9]{2}$"
+                },
+                {
+                    "pattern": "^[0-9]{4}$"
+                }
+            ]
         }
     },
     "anyOf": [
         {
             "properties": {
                 "birth_date": {
-                    "description": "The person's date of birth.",
-                    "$ref": "#/definitions/full_date"
+                    "description": "The person's birth date.",
+                    "$ref": "#/definitions/date"
                 }
             },
             "required": [ "birth_date"]

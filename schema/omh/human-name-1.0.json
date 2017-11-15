@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a person's full name.",
+    "type": "object",
+
+    "references": [
+        {
+            "description": "The SNOMED code represents Name (observable entity).",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/703503000"
+        }
+    ],
+    "properties": {
+        "given_name": {
+            "description": "The person's given (or first) name.",
+            "type": "string"
+        },
+        "family_name": {
+            "description": "The person's family (or last) name, or surname.",
+            "type": "string"
+        }
+    },
+    "required": [
+        "given_name",
+        "family_name"
+    ]
+}

@@ -30,35 +30,60 @@
                     "pattern": "^[0-9]{4}$"
                 }
             ]
+        },
+        "human_name": {
+            "$ref": "human-name-1.x.json"
+        }
+    },
+    "properties": {
+        "birth_date": {
+            "description": "The person's birth date, full or partial.",
+            "$ref": "#/definitions/date"
+        },
+        "handedness": {
+            "description": "The person's handedness, which indicates the dominant side.",
+            "type": "string",
+            "enum": [
+                "ambidextrous",
+                "left handed",
+                "right handed",
+                "unknown handedness"
+            ]
+        },
+        "practitioner": {
+            "description": "A practitioner to which the person is linked.",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/human_name"
+                },
+                "role": {
+                    "type": "string",
+                    "enum": [
+                        "primary care physician",
+                        "pharmacist"
+                    ]
+                }
+            },
+            "required": [
+                "name"
+            ]
         }
     },
     "anyOf": [
         {
-            "properties": {
-                "birth_date": {
-                    "description": "The person's birth date.",
-                    "$ref": "#/definitions/date"
-                }
-            },
+            "required": [
+                "handedness"
+            ]
+        },
+        {
             "required": [
                 "birth_date"
             ]
         },
         {
-            "properties": {
-                "handedness": {
-                    "description": "The person's handedness, which indicates the dominant side.",
-                    "type": "string",
-                    "enum": [
-                        "ambidextrous",
-                        "left handed",
-                        "right handed",
-                        "unknown handedness"
-                    ]
-                }
-            },
             "required": [
-                "handedness"
+                "practitioner"
             ]
         }
     ]

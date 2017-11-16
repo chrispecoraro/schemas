@@ -55,27 +55,29 @@
         },
         "linked_to": {
             "description": "A person/role to which the person is linked.",
-            "type": "object",
-            "properties": {
-                "name": {
-                    "$ref": "#/definitions/human_name"
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "$ref": "#/definitions/human_name"
+                    },
+                    "id": {
+                        "description": "The identifier, if applicable, of the person/role linked to.",
+                        "type": "string"
+                    },
+                    "role": {
+                        "type": "string",
+                        "description": "This value set is partial: additional values will be added as needed.",
+                        "enum": [
+                            "primary care physician",
+                            "pharmacist"
+                        ]
+                    }
                 },
-                "id": {
-                    "description": "The identifier, if applicable, of the person/role linked to.",
-                    "type": "string"
-                },
-                "role": {
-                    "type": "string",
-                    "description": "This value set is partial: additional values will be added as needed.",
-                    "enum": [
-                        "primary care physician",
-                        "pharmacist"
-                    ]
-                }
-            },
-            "required": [
-                "name"
-            ]
+                "required": [
+                    "name"
+                ]
+            }
         }
     },
     "anyOf": [

@@ -1,11 +1,13 @@
 {
     "birth_date": "2009-10-17",
     "handedness": "right handed",
-    "linked_to": {
-        "name": {
-            "given_name": "Anna",
-            "family_name": "Smith"
-        },
-        "role": "primary care physician"
-    }
+    "linked_to": [
+        {
+            "name": {
+                "given_name": "Anna",
+                "family_name": "Smith"
+            },
+            "role": "primary care physician"
+        }
+    ]
 }

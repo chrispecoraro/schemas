@@ -127,36 +127,29 @@
                 "QZSS"
             ]
         },
-        "accuracy": {
-            "type": "array",
-
-            "items": {
-                "type": "object",
-                "references": [
-                    {
-                        "description": "The HL7 code represents position accuracy.",
-                        "url": "http://purl.bioontology.org/ontology/HL7/C3244100"
-                    },
-                    {
-                        "description": "The various measures of GPS accuracy.",
-                        "url": "http://www.novatel.com/assets/Documents/Bulletins/apn029.pdf"
-                    }
-                ],
+        "position_accuracy": {
+            "type": "object",
+            "references": [
+                {
+                    "description": "The HL7 code represents position accuracy.",
+                    "url": "http://purl.bioontology.org/ontology/HL7/C3244100"
+                },
+                {
+                    "description": "The various measures of GPS position accuracy.",
+                    "url": "http://www.novatel.com/assets/Documents/Bulletins/apn029.pdf"
+                }
+            ],
+            "properties": {
+                "horizontal_accuracy": {
+                    "$ref": "#/definitions/length_unit_value"
+                },
+                "vertical_accuracy": {
+                    "$ref": "#/definitions/length_unit_value"
+                },
                 "radius": {
                     "$ref": "#/definitions/length_unit_value"
                 },
-                "dimension": {
-                    "description": "The dimension of the accuracy measure.",
-                    "anyOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "enum": ["horizontal", "vertical", "3-D"]
-                        }
-                    ]
-                },
-                "accuracy_measure": {
+                "measure_type": {
                     "description": "Known measures are listed. Others can be added, if needed.",
                     "anyOf": [
                         {
@@ -167,10 +160,7 @@
                         }
                     ]
                 }
-            },
-            "required": [
-                "radius"
-            ]
+            }
         }
     },
     "required": [

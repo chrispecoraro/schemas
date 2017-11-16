@@ -7,11 +7,16 @@
         "value": "-105.21440124511719",
         "unit": "v"
     },
-    "accuracy": [
-        {
-            "dimension": "horizontal"
+    "position_accuracy": {
+        "horizontal_accuracy": {
+            "value": 1.5,
+            "unit": "min"
+        },
+        "vertical_accuracy": {
+            "value": 2.5,
+            "unit": "m"
         }
-    ],
+    },
     "effective_time_frame": {
         "date_time": "2013-02-05T07:25:00Z"
     }

@@ -36,22 +36,16 @@
         }
     ],
     "positioning_system": "GPS",
-    "accuracy": [
-        {
-            "radius": {
-                "value": 1.5,
-                "unit": "m"
-            },
-            "dimension": "horizontal"
+    "position_accuracy": {
+        "horizontal_accuracy": {
+            "value": 1.5,
+            "unit": "m"
         },
-        {
-            "radius": {
-                "value": 1.75,
-                "unit": "m"
-            },
-            "dimension": "vertical"
+        "vertical_accuracy": {
+            "value": 2.5,
+            "unit": "m"
         }
-    ],
+    },
     "effective_time_frame": {
         "date_time": "2013-02-05T07:25:00Z"
     }

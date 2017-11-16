@@ -1,7 +1,7 @@
 {
     "birth_date": "2009-10-17",
     "handedness": "right handed",
-    "practitioner": {
+    "linked_to": {
         "name": {
             "given_name": "Anna",
             "family_name": "Smith"
